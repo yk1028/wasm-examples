@@ -5,12 +5,13 @@
 - rustc 1.69.0
 
 ### Cosmwasm project process
-1. `cargo generate --git https://github.com/CosmWasm/cosmwasm-template.git --name {my-contract}`
-2. Implement your code with templete.
-3. `cargo build --target wasm32-unknown-unknown --release`
+1. `cd wasm`
+2. `cargo generate --git https://github.com/CosmWasm/cosmwasm-template.git --name {my-contract}`
+3. Implement your code with templete.
+4. `cargo build --target wasm32-unknown-unknown --release`
    - If a target error occurs, execute the command below:
      `rustup target add wasm32-unknown-unknown`
-1. store wasm file to blockchain.
+5. store wasm file to blockchain.
    - wasm file path: `src/target/wasm32-unknown-unknown-release`
 
 ### Optimize
