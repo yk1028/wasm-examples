@@ -1,4 +1,4 @@
-# WASM-EXAMPLES
+# WASM examples
 
 ### Environment
 - cargo 1.69.0
@@ -9,8 +9,8 @@
 2. Implement your code with templete.
 3. `cargo build --target wasm32-unknown-unknown --release`
    - If a target error occurs, execute the command below:
-   - `rustup target add wasm32-unknown-unknown`
-4. store wasm file to blockchain.
+     `rustup target add wasm32-unknown-unknown`
+1. store wasm file to blockchain.
    - wasm file path: `src/target/wasm32-unknown-unknown-release`
 
 ### Optimize
@@ -25,3 +25,6 @@
     rustup install 1.69.0
     rustup default 1.69.0
     ```
+- cosmwasm-std feature error
+  - set feature to `staking`
+  - `cosmwasm_1_2` and `cosmwasm_1_3` settings are not supported by xpla.
