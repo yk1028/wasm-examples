@@ -10,6 +10,7 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [profile.release]
+strip = true
 opt-level = 3
 debug = false
 rpath = false
@@ -36,7 +37,7 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 [dependencies]
 cosmwasm-schema = "1.5.0"
 cosmwasm-std = { version = "1.5.0", features = [
-    "cosmwasm_1_3",
+    "staking",
     # Enable this if you only deploy to chains that have CosmWasm 1.4 or higher
     # "cosmwasm_1_4",
 ] }
@@ -46,5 +47,3 @@ schemars = "0.8.15"
 serde = { version = "1.0.189", default-features = false, features = ["derive"] }
 thiserror = { version = "1.0.49" }
 
-[dev-dependencies]
-cw-multi-test = "0.17.0"
